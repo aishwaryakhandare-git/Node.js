@@ -5,6 +5,11 @@ app.listen(3000, () =>{
     console.log("Server running on port 3000")
 })
 
+app.post("/customers",(req,res)=>{
+    console.log(req.body)
+    res.send("Customer received")
+});
+
 app.get("/",(req,res)=>{
     res.send("CRM Backend Running")
-})
+});
