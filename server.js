@@ -1,9 +1,6 @@
 const express = require("express")
 const app = express();
 app.use(express.json());
-app.listen(3000, () =>{
-    console.log("Server running on port 3000")
-})
 
 app.post("/customers",(req,res)=>{
     console.log(req.body)
@@ -13,3 +10,7 @@ app.post("/customers",(req,res)=>{
 app.get("/",(req,res)=>{
     res.send("CRM Backend Running")
 });
+
+app.listen(3000, () =>{
+    console.log("Server running on port 3000")
+})
